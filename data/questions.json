@@ -1,0 +1,17 @@
+[
+  { "id": 1, "type": "text", "prize": "₹1", "question": "What does 'EOD' usually mean in office emails?", "media": null, "options": { "A": "End of Day", "B": "Eat Only Dosa", "C": "Email On Delay", "D": "Extra Overtime Duty" }, "answer": "A" },
+  { "id": 2, "type": "text", "prize": "₹1.5", "question": "Which key combination is the universal 'undo'?", "media": null, "options": { "A": "Ctrl + U", "B": "Ctrl + Z", "C": "Ctrl + Y", "D": "Alt + F4" }, "answer": "B" },
+  { "id": 3, "type": "text", "prize": "₹2", "question": "Which festival is known as the 'Festival of Lights'?", "media": null, "options": { "A": "Holi", "B": "Pongal", "C": "Diwali", "D": "Onam" }, "answer": "C" },
+  { "id": 4, "type": "text", "prize": "₹5", "question": "What is the capital of Telangana?", "media": null, "options": { "A": "Warangal", "B": "Vijayawada", "C": "Bengaluru", "D": "Hyderabad" }, "answer": "D" },
+  { "id": 5, "type": "text", "prize": "₹7", "question": "In a meeting, 'Let's take this offline' usually means…", "media": null, "options": { "A": "Switch off the Wi-Fi", "B": "Discuss it later, separately", "C": "Go for chai", "D": "Print the slides" }, "answer": "B" },
+  { "id": 6, "type": "image", "prize": "₹10", "question": "Which beloved office fuel is shown in this picture?", "media": "/questions/images/q6.jpg", "options": { "A": "Filter coffee", "B": "Lassi", "C": "Masala chai", "D": "Cold brew" }, "answer": "C" },
+  { "id": 7, "type": "text", "prize": "₹15", "question": "How many players are there in a cricket team on the field?", "media": null, "options": { "A": "9", "B": "10", "C": "11", "D": "12" }, "answer": "C" },
+  { "id": 8, "type": "text", "prize": "₹20", "question": "HTTP status code 404 means…", "media": null, "options": { "A": "Not Found", "B": "Server on leave", "C": "Forbidden", "D": "Too many requests" }, "answer": "A" },
+  { "id": 9, "type": "audio", "prize": "₹25", "question": "Listen carefully! How many beeps do you hear?", "media": "/questions/audio/q9.wav", "options": { "A": "One", "B": "Two", "C": "Three", "D": "Four" }, "answer": "C" },
+  { "id": 10, "type": "text", "prize": "₹30", "question": "Which planet is known as the Red Planet?", "media": null, "options": { "A": "Venus", "B": "Mars", "C": "Jupiter", "D": "Mercury" }, "answer": "B" },
+  { "id": 11, "type": "text", "prize": "₹45", "question": "Who is known as the 'Missile Man of India'?", "media": null, "options": { "A": "Vikram Sarabhai", "B": "Homi Bhabha", "C": "C. V. Raman", "D": "A. P. J. Abdul Kalam" }, "answer": "D" },
+  { "id": 12, "type": "text", "prize": "₹50", "question": "What does 'CSV' stand for?", "media": null, "options": { "A": "Comma-Separated Values", "B": "Computer System Version", "C": "Central Server Volume", "D": "Copy Save View" }, "answer": "A" },
+  { "id": 13, "type": "text", "prize": "₹75", "question": "Which river is the longest in India?", "media": null, "options": { "A": "Godavari", "B": "Yamuna", "C": "Ganga", "D": "Krishna" }, "answer": "C" },
+  { "id": 14, "type": "text", "prize": "₹90", "question": "In which year did India win its first Cricket World Cup?", "media": null, "options": { "A": "1979", "B": "1983", "C": "1987", "D": "2011" }, "answer": "B" },
+  { "id": 15, "type": "text", "prize": "₹100", "question": "What is the chemical symbol for Gold?", "media": null, "options": { "A": "Gd", "B": "Go", "C": "Au", "D": "Ag" }, "answer": "C" }
+]

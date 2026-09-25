@@ -37,7 +37,7 @@ export type GameState = {
   timerEndsAt?: string | null;
   timerRemaining?: number | null; // seconds, when paused
   lifelines?: { fifty?: boolean; poll?: boolean; dosth?: boolean };
-  poll?: { open: boolean; round: number; endsAt?: string | null } | null;
+  poll?: { open: boolean; round: number; index?: number; endsAt?: string | null } | null;
   dosth?: { team: string; member: string } | null;
   winnings?: string;
   message?: string | null;

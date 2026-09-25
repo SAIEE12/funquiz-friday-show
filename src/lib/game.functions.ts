@@ -39,7 +39,7 @@ async function openPoll(state: GameState, durationSec: number): Promise<GameStat
   const round = (state.poll?.round ?? 0) + 1;
   return {
     ...state,
-    poll: { open: true, round, endsAt: timerFrom(durationSec) },
+    poll: { open: true, round, index: state.index, endsAt: timerFrom(durationSec) },
     lifelines: { ...state.lifelines, poll: true },
     message: "poll",
   };

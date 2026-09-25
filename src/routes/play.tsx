@@ -37,7 +37,7 @@ function HotSeat() {
 
   const q = state.question;
   const canAct = state.status === "question";
-  const run = async (data: Parameters<typeof act>[0]["data"]) => {
+  const run = async (data: { action: "lock" | "fifty" | "poll" | "dosth"; letter?: Letter; team?: string; member?: string }) => {
     try { await act({ data }); } catch { toast.error("Network hiccup. Blame the Wi-Fi."); }
   };
 

@@ -29,14 +29,14 @@ export type GameStatus = "idle" | "question" | "locked" | "revealed" | "won" | "
 export type GameState = {
   status: GameStatus;
   index: number;
-  total?: number;
-  question?: PublicQuestion | null;
-  selected?: Letter | null;
-  removed?: Letter[];
-  revealedAnswer?: Letter | null;
-  timerEndsAt?: string | null;
-  timerRemaining?: number | null; // seconds, when paused
-  lifelines?: { fifty?: boolean; poll?: boolean; dosth?: boolean };
+  total?: number | undefined;
+  question?: PublicQuestion | null | undefined;
+  selected?: Letter | null | undefined;
+  removed?: Letter[] | undefined;
+  revealedAnswer?: Letter | null | undefined;
+  timerEndsAt?: string | null | undefined;
+  timerRemaining?: number | null | undefined; // seconds, when paused
+  lifelines?: { fifty?: boolean | undefined; poll?: boolean | undefined; dosth?: boolean };
   poll?: { open: boolean; round: number; index?: number; endsAt?: string | null } | null;
   dosth?: { team: string; member: string } | null;
   winnings?: string;

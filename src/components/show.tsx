@@ -105,7 +105,7 @@ export function tileState(l: Letter, s: GameState, localSel?: Letter | null): Pa
   return "idle";
 }
 
-export function PollBars({ votes, removed }: { votes: { choice: Letter }[]; removed?: Letter[] }) {
+export function PollBars({ votes, removed }: { votes: { choice: Letter }[]; removed?: Letter[] | undefined }) {
   const total = votes.length;
   const counts = LETTERS.map((l) => votes.filter((v) => v.choice === l).length);
   const max = Math.max(...counts);

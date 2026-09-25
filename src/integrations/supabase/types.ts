@@ -14,7 +14,66 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      game: {
+        Row: {
+          id: number
+          settings: Json
+          state: Json
+          updated_at: string
+        }
+        Insert: {
+          id?: number
+          settings?: Json
+          state?: Json
+          updated_at?: string
+        }
+        Update: {
+          id?: number
+          settings?: Json
+          state?: Json
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      game_private: {
+        Row: {
+          host_pin: string
+          id: number
+        }
+        Insert: {
+          host_pin?: string
+          id?: number
+        }
+        Update: {
+          host_pin?: string
+          id?: number
+        }
+        Relationships: []
+      }
+      poll_votes: {
+        Row: {
+          choice: string
+          created_at: string
+          id: string
+          round: number
+          voter_name: string
+        }
+        Insert: {
+          choice: string
+          created_at?: string
+          id?: string
+          round: number
+          voter_name: string
+        }
+        Update: {
+          choice?: string
+          created_at?: string
+          id?: string
+          round?: number
+          voter_name?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

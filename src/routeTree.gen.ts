@@ -10,12 +10,24 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as HostRouteImport } from './routes/host'
+import { Route as PlayRouteImport } from './routes/play'
 import { Route as PollRouteImport } from './routes/poll'
 import { Route as SetupRouteImport } from './routes/setup'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HostRoute = HostRouteImport.update({
+  id: '/host',
+  path: '/host',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlayRoute = PlayRouteImport.update({
+  id: '/play',
+  path: '/play',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PollRoute = PollRouteImport.update({
@@ -31,30 +43,38 @@ const SetupRoute = SetupRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/host': typeof HostRoute
+  '/play': typeof PlayRoute
   '/poll': typeof PollRoute
   '/setup': typeof SetupRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/host': typeof HostRoute
+  '/play': typeof PlayRoute
   '/poll': typeof PollRoute
   '/setup': typeof SetupRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/host': typeof HostRoute
+  '/play': typeof PlayRoute
   '/poll': typeof PollRoute
   '/setup': typeof SetupRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/poll' | '/setup'
+  fullPaths: '/' | '/host' | '/play' | '/poll' | '/setup'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/poll' | '/setup'
-  id: '__root__' | '/' | '/poll' | '/setup'
+  to: '/' | '/host' | '/play' | '/poll' | '/setup'
+  id: '__root__' | '/' | '/host' | '/play' | '/poll' | '/setup'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  HostRoute: typeof HostRoute
+  PlayRoute: typeof PlayRoute
   PollRoute: typeof PollRoute
   SetupRoute: typeof SetupRoute
 }
@@ -66,6 +86,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/host': {
+      id: '/host'
+      path: '/host'
+      fullPath: '/host'
+      preLoaderRoute: typeof HostRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play': {
+      id: '/play'
+      path: '/play'
+      fullPath: '/play'
+      preLoaderRoute: typeof PlayRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/poll': {
@@ -87,6 +121,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  HostRoute: HostRoute,
+  PlayRoute: PlayRoute,
   PollRoute: PollRoute,
   SetupRoute: SetupRoute,
 }

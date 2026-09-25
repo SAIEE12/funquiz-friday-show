@@ -22,7 +22,7 @@ export const Route = createFileRoute("/host")({
   component: () => <PinGate>{(pin, logout) => <Host pin={pin} logout={logout} />}</PinGate>,
 });
 
-type Action = Parameters<ReturnType<typeof useServerFn<typeof hostAction>>>[0]["data"]["action"];
+type Action = "verify" | "answer" | "start" | "next" | "reveal" | "timerStart" | "timerPause" | "timerReset" | "openPoll" | "closePoll" | "fifty" | "quit" | "reset";
 
 function Host({ pin, logout }: { pin: string; logout: () => void }) {
   const { state, settings } = useGame();

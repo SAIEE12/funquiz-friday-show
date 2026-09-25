@@ -20,7 +20,7 @@ export function PollQR({ size = 120 }: { size?: number }) {
 }
 
 /** Big animated banner for lifeline / result moments */
-export function StageBanner({ state, dosthText }: { state: GameState; dosthText?: string }) {
+export function StageBanner({ state, dosthText }: { state: GameState; dosthText?: string | undefined }) {
   let text: string | null = null;
   let title = "";
   if (state.status === "lost") { title = "Galat Jawab!"; text = JOKES.wrong; }

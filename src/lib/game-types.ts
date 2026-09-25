@@ -39,7 +39,7 @@ export type GameState = {
   lifelines?: { fifty?: boolean | undefined; poll?: boolean | undefined; dosth?: boolean };
   poll?: { open: boolean; round: number; index?: number; endsAt?: string | null } | null;
   dosth?: { team: string; member: string } | null;
-  winnings?: string;
+  winnings?: string | undefined;
   message?: string | null;
 };
 
